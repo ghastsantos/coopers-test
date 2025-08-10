@@ -239,7 +239,7 @@ add_theme_support('automatic-feed-links');
 ## 👨‍💻 Autor
 
 **Gastão Eduardo Santos Borges**
-- 💼 LinkedIn: [LinkedIn Profile](https://linkedin.com/in/gastao-santos)
+- 💼 LinkedIn: [LinkedIn Profile](https://linkedin.com/in/gastaoesb2606)
 
 ---
 
