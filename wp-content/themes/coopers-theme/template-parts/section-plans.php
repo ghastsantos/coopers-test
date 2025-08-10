@@ -16,31 +16,36 @@
           </div>
           
           <div class="plan-features">
-            <?php if(have_rows('basic_plan_features')): ?>
-              <ul class="features-list">
-                <?php while(have_rows('basic_plan_features')): the_row(); 
-                  $feature_text = get_sub_field('feature_text');
-                  $feature_included = get_sub_field('feature_included');
-                ?>
-                  <li class="feature-item <?php echo $feature_included ? 'included' : 'not-included'; ?>">
-                    <span class="feature-icon">
-                      <?php if($feature_included): ?>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="8" cy="8" r="8" fill="#4AC959"/>
-                          <path d="M6.66667 10.6667L4 8L4.94 7.06L6.66667 8.78667L11.06 4.38667L12 5.33333L6.66667 10.6667Z" fill="white"/>
-                        </svg>
-                      <?php else: ?>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="8" cy="8" r="8" fill="#FF6B6B"/>
-                          <path d="M5.33333 5.33333L10.6667 10.6667M10.6667 5.33333L5.33333 10.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                      <?php endif; ?>
-                    </span>
-                    <span class="feature-text"><?php echo esc_html($feature_text); ?></span>
-                  </li>
-                <?php endwhile; ?>
-              </ul>
-            <?php endif; ?>
+            <ul class="features-list">
+              <?php 
+              $i = 1;
+              while(true):
+                $feature_text = get_field("basic_feature_{$i}_text");
+                if(!$feature_text) break;
+                
+                $feature_included = get_field("basic_feature_{$i}_included");
+              ?>
+                <li class="feature-item <?php echo $feature_included ? 'included' : 'not-included'; ?>">
+                  <span class="feature-icon">
+                    <?php if($feature_included): ?>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#4AC959"/>
+                        <path d="M10 15L7 12L8.41 10.59L10 12.17L15.59 6.58L17 8L10 15Z" fill="white"/>
+                      </svg>
+                    <?php else: ?>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#FF4607"/>
+                        <path d="M8 8L16 16M16 8L8 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    <?php endif; ?>
+                  </span>
+                  <span class="feature-text"><?php echo esc_html($feature_text); ?></span>
+                </li>
+              <?php 
+                $i++;
+              endwhile; 
+              ?>
+            </ul>
           </div>
           
           <div class="plan-footer">
@@ -68,31 +73,36 @@
           </div>
           
           <div class="plan-features">
-            <?php if(have_rows('pro_plan_features')): ?>
-              <ul class="features-list">
-                <?php while(have_rows('pro_plan_features')): the_row(); 
-                  $feature_text = get_sub_field('feature_text');
-                  $feature_included = get_sub_field('feature_included');
-                ?>
-                  <li class="feature-item <?php echo $feature_included ? 'included' : 'not-included'; ?>">
-                    <span class="feature-icon">
-                      <?php if($feature_included): ?>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="8" cy="8" r="8" fill="#4AC959"/>
-                          <path d="M6.66667 10.6667L4 8L4.94 7.06L6.66667 8.78667L11.06 4.38667L12 5.33333L6.66667 10.6667Z" fill="white"/>
-                        </svg>
-                      <?php else: ?>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="8" cy="8" r="8" fill="#FF6B6B"/>
-                          <path d="M5.33333 5.33333L10.6667 10.6667M10.6667 5.33333L5.33333 10.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                      <?php endif; ?>
-                    </span>
-                    <span class="feature-text"><?php echo esc_html($feature_text); ?></span>
-                  </li>
-                <?php endwhile; ?>
-              </ul>
-            <?php endif; ?>
+            <ul class="features-list">
+              <?php 
+              $i = 1;
+              while(true):
+                $feature_text = get_field("pro_feature_{$i}_text");
+                if(!$feature_text) break;
+
+                $feature_included = get_field("pro_feature_{$i}_included");
+              ?>
+                <li class="feature-item <?php echo $feature_included ? 'included' : 'not-included'; ?>">
+                  <span class="feature-icon">
+                    <?php if($feature_included): ?>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#4AC959"/>
+                        <path d="M10 15L7 12L8.41 10.59L10 12.17L15.59 6.58L17 8L10 15Z" fill="white"/>
+                      </svg>
+                    <?php else: ?>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#FF4607"/>
+                        <path d="M8 8L16 16M16 8L8 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    <?php endif; ?>
+                  </span>
+                  <span class="feature-text"><?php echo esc_html($feature_text); ?></span>
+                </li>
+              <?php 
+                $i++;
+              endwhile; 
+              ?>
+            </ul>
           </div>
           
           <div class="plan-footer">
@@ -109,6 +119,8 @@
         
       </div>
     </div>
+
+    <div class="plans-triangle-decoration"></div>
 
     <?php 
     $plans_bg_image = get_field('plans_background_image');

@@ -1,70 +1,252 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# 🎯 Coopers Theme - WordPress Landing Page
 
-_s
-===
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Um tema WordPress moderno e responsivo desenvolvido especialmente para a **Coopers Digital**, com design clean, funcionalidades avançadas e otimização completa para todos os dispositivos.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+---
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+## 📋 Índice
 
-Installation
----------------
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Configuração](#-configuração)
+- [Componentes](#-componentes)
+- [Responsividade](#-responsividade)
+- [ACF (Advanced Custom Fields)](#-acf-advanced-custom-fields)
+- [JavaScript](#-javascript)
+- [CSS Features](#-css-features)
+- [Performance](#-performance)
+- [Browser Support](#-browser-support)
+- [Contribuição](#-contribuição)
+- [Licença](#-licença)
 
-### Requirements
+---
 
-`_s` requires the following dependencies:
+## 🎨 Sobre o Projeto
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
+O **Coopers Theme** é uma landing page moderna desenvolvida para apresentar os serviços da Coopers Digital de forma impactante e profissional. O projeto foi construído do zero utilizando as melhores práticas de desenvolvimento WordPress, com foco em:
 
-### Quick Start
+- ✅ **Design Responsivo** - Funciona perfeitamente em todos os dispositivos
+- ✅ **Performance Otimizada** - Carregamento rápido e eficiente
+- ✅ **SEO Friendly** - Estrutura semântica e otimizada para buscadores
+- ✅ **Acessibilidade** - Seguindo padrões WCAG
+- ✅ **Código Limpo** - Estrutura organizada e bem documentada
 
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
+---
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+## 🚀 Funcionalidades
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+### 🎯 Seções Principais
+- **Hero Section** - Área de destaque com call-to-action
+- **To-do List** - Apresentação de funcionalidades
+- **Plans Section** - Planos e preços
+- **Carousel** - Showcase de projetos/serviços
+- **Contact Form** - Formulário de contato funcional
 
-### Setup
+### 💎 Features Avançadas
+- **Carousel Responsivo** - Sistema de páginas com navegação por dots
+- **Formulário Inteligente** - Validação em tempo real
+- **Animações Suaves** - Transições e efeitos CSS
+- **Mobile First** - Design otimizado para dispositivos móveis
+- **Touch Support** - Gestos de swipe no carousel
+- **Keyboard Navigation** - Navegação por teclado acessível
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+---
 
-```sh
-$ composer install
-$ npm install
+## 🛠 Tecnologias Utilizadas
+
+### Backend
+- **WordPress 6.x** - CMS base
+- **PHP 8.x** - Linguagem de programação
+- **Advanced Custom Fields** - Gerenciamento de conteúdo
+
+### Frontend
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilização moderna com Grid/Flexbox
+- **JavaScript ES6** - Interatividade e funcionalidades
+- **Google Fonts** - Tipografia (Montserrat)
+
+### Ferramentas & Metodologias
+- **Mobile First Design** - Desenvolvimento para mobile primeiro
+- **Progressive Enhancement** - Melhoria progressiva
+- **Semantic HTML** - HTML semântico
+- **CSS Grid & Flexbox** - Layouts modernos
+- **CSS Custom Properties** - Variáveis CSS
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+coopers-theme/
+├── 📁 assets/
+│   └── 📁 images/           # Imagens do tema
+│       ├── hero-bg.jpg
+│       ├── icon-mail.png
+│       └── todo-bg.png
+├── 📁 inc/                  # Includes do WordPress (opcional)
+├── 📁 js/                   # JavaScript
+│   └── main.js             # Funcionalidades principais
+├── 📁 template-parts/       # Componentes modulares
+│   ├── section-hero.php    # Seção hero
+│   ├── section-todolist.php # Seção to-do list
+│   ├── section-plans.php   # Seção de planos
+│   ├── section-carousel.php # Carousel de projetos
+│   └── section-contact.php # Formulário de contato
+├── 📄 style.css            # Estilos principais
+├── 📄 functions.php        # Funções do WordPress
+├── 📄 header.php           # Cabeçalho
+├── 📄 footer.php           # Rodapé
+├── 📄 front-page.php       # Página inicial
+└── 📄 index.php            # Template base
 ```
 
-### Available CLI commands
+---
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+## 💻 Instalação
 
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+### Pré-requisitos
+- WordPress 5.0 ou superior
+- PHP 7.4 ou superior
+- Plugin Advanced Custom Fields (gratuito)
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+### Passo a Passo
 
-Good luck!
+1. **Clone/Download do tema**
+   ```bash
+   cd wp-content/themes/
+   git clone [repositório] coopers-theme
+   ```
+
+2. **Ativação no WordPress**
+   - Acesse: `Aparência > Temas`
+   - Ative o tema "Coopers Theme"
+
+3. **Instalação do ACF**
+   - Vá em `Plugins > Adicionar novo`
+   - Busque por "Advanced Custom Fields"
+   - Instale e ative a versão gratuita
+
+4. **Configuração inicial**
+   - Configure os campos ACF (veja seção [ACF](#-acf-advanced-custom-fields))
+   - Adicione as imagens necessárias
+   - Configure o formulário de contato
+
+---
+
+## ⚙️ Configuração
+
+### 1. Google Fonts
+O tema já inclui a fonte **Montserrat** automaticamente via `functions.php`:
+
+```php
+wp_enqueue_style(
+    'coopers-google-fonts',
+    'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'
+);
+```
+
+### 2. Enfileiramento de Scripts
+```php
+wp_enqueue_script(
+    'coopers-theme-main',
+    get_template_directory_uri() . '/js/main.js',
+    array(),
+    _S_VERSION,
+    true
+);
+```
+
+### 3. Suporte a Recursos
+```php
+add_theme_support('post-thumbnails');
+add_theme_support('title-tag');
+add_theme_support('automatic-feed-links');
+```
+
+---
+
+## 🧩 Componentes
+
+### 🦸 Hero Section
+**Arquivo:** `template-parts/section-hero.php`
+
+- Background dinâmico com overlay
+- Título e subtítulo editáveis via ACF
+- Call-to-action button responsivo
+- Imagem de destaque
+
+**Campos ACF:**
+- `hero_title` - Título principal
+- `hero_subtitle` - Subtítulo
+- `hero_description` - Descrição
+- `hero_button_text` - Texto do botão
+- `hero_button_url` - URL do botão
+
+### 📝 To-do List Section
+**Arquivo:** `template-parts/section-todolist.php`
+
+- Background diagonal estilizado
+- Conteúdo editável via ACF
+- Design moderno com linha decorativa
+
+### 💰 Plans Section
+**Arquivo:** `template-parts/section-plans.php`
+
+- Showcase de planos/serviços
+- Layout flexível e responsivo
+- Cards com hover effects
+
+### 🎠 Carousel Section
+**Arquivo:** `template-parts/section-carousel.php`
+
+- Sistema de páginas responsivo
+- Navegação por dots
+- Suporte a touch/swipe
+- 3 cards desktop, 2 cards tablet, 1 card mobile
+
+**JavaScript:** Controle automático de navegação
+
+### 📧 Contact Section
+**Arquivo:** `template-parts/section-contact.php`
+
+- Formulário funcional com validação
+- Design split-screen
+- Photo com efeito zoom
+- Feedback visual de envio
+
+---
+
+## 📱 Responsividade
+
+### Breakpoints Principais
+
+```css
+/* Mobile First */
+@media (max-width: 768px) { /* Mobile */ }
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */ }
+@media (min-width: 1025px) and (max-width: 1199px) { /* Desktop pequeno */ }
+@media (min-width: 1200px) { /* Desktop grande */ }
+```
+
+## 👨‍💻 Autor
+
+**Gastão Eduardo Santos Borges**
+- 💼 LinkedIn: [LinkedIn Profile](https://linkedin.com/in/gastao-santos)
+
+---
+
+<div align="center">
+
+**⭐ Se este projeto te ajudou, considere dar uma estrela!**
+
+**Desenvolvido com ❤️ para a Coopers Digital**
+
+</div>

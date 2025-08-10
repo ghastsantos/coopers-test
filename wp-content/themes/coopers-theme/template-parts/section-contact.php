@@ -2,50 +2,40 @@
   <div class="container">
     <div class="contact-wrapper">
       
-      <!-- Left Side - Photo with Green Background -->
-      <div class="contact-left">
-        <div class="contact-image-wrapper">
-          <!-- Green Rectangle Background -->
-          <div class="green-background"></div>
-          
-          <!-- Profile Photo -->
-          <?php 
-          $contact_photo = get_field('contact_photo');
-          if($contact_photo): ?>
-            <div class="contact-photo">
-              <img src="<?php echo esc_url($contact_photo['url']); ?>" alt="<?php echo esc_attr($contact_photo['alt']); ?>">
-            </div>
-          <?php else: ?>
-            <div class="contact-photo">
-              <div class="placeholder-photo"></div>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-      
-      <!-- Right Side - Contact Form -->
       <div class="contact-right">
         <div class="contact-form-container">
+          <div class="contact-left">
+          <div class="contact-image-wrapper">
+            <div class="green-background"></div>
+            
+            <?php 
+            $contact_photo = get_field('contact_photo');
+            if($contact_photo): ?>
+              <div class="contact-photo">
+                <img src="<?php echo esc_url($contact_photo['url']); ?>" alt="<?php echo esc_attr($contact_photo['alt']); ?>">
+              </div>
+            <?php else: ?>
+              <div class="contact-photo">
+                <div class="placeholder-photo"></div>
+              </div>
+            <?php endif; ?>
+          </div>
+      </div>
           
-          <!-- Title with Icon -->
           <div class="contact-header">
             <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="4" width="20" height="16" rx="2" stroke="#4AC959" stroke-width="2"/>
-                <path d="M2 6L12 13L22 6" stroke="#4AC959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mail.png" alt="Contact Icon" width="60" height="60">
             </div>
             <h2 class="contact-title">
-              <?php echo get_field('contact_title') ?: 'GET IN TOUCH'; ?>
+              <span class="title-part-1"><?php echo get_field('contact_title_part_1') ?: 'GET IN'; ?></span>
+              <span class="title-part-2"><?php echo get_field('contact_title_part_2') ?: 'TOUCH'; ?></span>
             </h2>
           </div>
           
-          <!-- Contact Form -->
           <form class="contact-form" id="contactForm" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
             <input type="hidden" name="action" value="submit_contact_form">
             <?php wp_nonce_field('contact_form_nonce', 'contact_nonce'); ?>
             
-            <!-- Name Field -->
             <div class="form-group">
               <label for="contact_name" class="form-label">
                 <?php echo get_field('contact_name_label') ?: 'Your name'; ?>
@@ -60,9 +50,7 @@
               >
             </div>
             
-            <!-- Email and Phone Row -->
             <div class="form-row">
-              <!-- Email Field -->
               <div class="form-group form-group-half">
                 <label for="contact_email" class="form-label">
                   <?php echo get_field('contact_email_label') ?: 'Email*'; ?>
@@ -77,7 +65,6 @@
                 >
               </div>
               
-              <!-- Phone Field -->
               <div class="form-group form-group-half">
                 <label for="contact_phone" class="form-label">
                   <?php echo get_field('contact_phone_label') ?: 'Telephone*'; ?>
@@ -108,14 +95,12 @@
               ></textarea>
             </div>
             
-            <!-- Submit Button -->
             <div class="form-submit">
               <button type="submit" class="contact-submit-btn">
                 <?php echo get_field('contact_button_text') ?: 'SEND NOW'; ?>
               </button>
             </div>
             
-            <!-- Form Messages -->
             <div class="form-messages" id="formMessages"></div>
             
           </form>
@@ -168,8 +153,7 @@ function handle_contact_form_submission() {
         'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>',
         'Reply-To: ' . $name . ' <' . $email . '>'
     );
-    
-    // Send email
+
     $sent = wp_mail($to, $subject, $body, $headers);
     
     if ($sent) {

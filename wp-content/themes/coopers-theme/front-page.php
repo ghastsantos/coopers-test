@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="todolist-bg-global"></div>
+
 <?php get_template_part('template-parts/section', 'hero'); ?>
 
 <?php get_template_part('template-parts/section', 'todolist'); ?>
