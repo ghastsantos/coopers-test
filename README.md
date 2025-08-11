@@ -31,8 +31,6 @@ Um tema WordPress moderno e responsivo desenvolvido especialmente para a **Coope
 
 ## 🎨 Sobre o Projeto
 
-O **Coopers Theme** é uma landing page moderna desenvolvida para apresentar os serviços da Coopers Digital de forma impactante e profissional. O projeto foi construído do zero utilizando as melhores práticas de desenvolvimento WordPress, com foco em:
-
 - ✅ **Design Responsivo** - Funciona perfeitamente em todos os dispositivos
 - ✅ **Performance Otimizada** - Carregamento rápido e eficiente
 - ✅ **SEO Friendly** - Estrutura semântica e otimizada para buscadores
@@ -91,7 +89,7 @@ coopers-theme/
 │       ├── hero-bg.jpg
 │       ├── icon-mail.png
 │       └── todo-bg.png
-├── 📁 inc/                  # Includes do WordPress (opcional)
+├── 📁 inc/                  # Includes do WordPress
 ├── 📁 js/                   # JavaScript
 │   └── main.js             # Funcionalidades principais
 ├── 📁 template-parts/       # Componentes modulares
@@ -135,9 +133,8 @@ coopers-theme/
    - Instale e ative a versão gratuita
 
 4. **Configuração inicial**
-   - Configure os campos ACF (veja seção [ACF](#-acf-advanced-custom-fields))
+   - Configure os campos ACF
    - Adicione as imagens necessárias
-   - Configure o formulário de contato
 
 ---
 
