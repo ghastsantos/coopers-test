@@ -1,98 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex,nofollow" />
-	<title>WordPress &#8250; ReadMe</title>
-	<link rel="stylesheet" href="wp-admin/css/install.css?ver=20100228" type="text/css" />
-</head>
-<body>
-<h1 id="logo">
-	<a href="https://wordpress.org/"><img alt="WordPress" src="wp-admin/images/wordpress-logo.png" /></a>
-</h1>
-<p style="text-align: center">Semantic Personal Publishing Platform</p>
+# 🎯 Coopers Theme - WordPress Landing Page
 
-<h2>First Things First</h2>
-<p>Welcome. WordPress is a very special project to me. Every developer and contributor adds something unique to the mix, and together we create something beautiful that I am proud to be a part of. Thousands of hours have gone into WordPress, and we are dedicated to making it better every day. Thank you for making it part of your world.</p>
-<p style="text-align: right">&#8212; Matt Mullenweg</p>
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-<h2>Installation: Famous 5-minute install</h2>
-<ol>
-	<li>Unzip the package in an empty directory and upload everything.</li>
-	<li>Open <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> in your browser. It will take you through the process to set up a <code>wp-config.php</code> file with your database connection details.
-		<ol>
-			<li>If for some reason this does not work, do not worry. It may not work on all web hosts. Open up <code>wp-config-sample.php</code> with a text editor like WordPad or similar and fill in your database connection details.</li>
-			<li>Save the file as <code>wp-config.php</code> and upload it.</li>
-			<li>Open <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> in your browser.</li>
-		</ol>
-	</li>
-	<li>Once the configuration file is set up, the installer will set up the tables needed for your site. If there is an error, double check your <code>wp-config.php</code> file, and try again. If it fails again, please go to the <a href="https://wordpress.org/support/forums/">WordPress support forums</a> with as much data as you can gather.</li>
-	<li><strong>If you did not enter a password, note the password given to you.</strong> If you did not provide a username, it will be <code>admin</code>.</li>
-	<li>The installer should then send you to the <a href="wp-login.php">login page</a>. Sign in with the username and password you chose during the installation. If a password was generated for you, you can then click on &#8220;Profile&#8221; to change the password.</li>
-</ol>
+Um tema WordPress moderno e responsivo desenvolvido especialmente para a **Coopers Digital**, com design clean, funcionalidades avançadas e otimização completa para todos os dispositivos.
 
-<h2>Updating</h2>
-<h3>Using the Automatic Updater</h3>
-<ol>
-	<li>Open <span class="file"><a href="wp-admin/update-core.php">wp-admin/update-core.php</a></span> in your browser and follow the instructions.</li>
-	<li>You wanted more, perhaps? That&#8217;s it!</li>
-</ol>
+---
 
-<h3>Updating Manually</h3>
-<ol>
-	<li>Before you update anything, make sure you have backup copies of any files you may have modified such as <code>index.php</code>.</li>
-	<li>Delete your old WordPress files, saving ones you&#8217;ve modified.</li>
-	<li>Upload the new files.</li>
-	<li>Point your browser to <span class="file"><a href="wp-admin/upgrade.php">/wp-admin/upgrade.php</a>.</span></li>
-</ol>
+## 📋 Índice
 
-<h2>Migrating from other systems</h2>
-<p>WordPress can <a href="https://developer.wordpress.org/advanced-administration/wordpress/import/">import from a number of systems</a>. First you need to get WordPress installed and working as described above, before using <a href="wp-admin/import.php">our import tools</a>.</p>
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Configuração](#-configuração)
+- [Componentes](#-componentes)
+- [Responsividade](#-responsividade)
+- [ACF (Advanced Custom Fields)](#-acf-advanced-custom-fields)
+- [JavaScript](#-javascript)
+- [CSS Features](#-css-features)
+- [Performance](#-performance)
+- [Browser Support](#-browser-support)
+- [Contribuição](#-contribuição)
+- [Licença](#-licença)
 
-<h2>System Requirements</h2>
-<ul>
-	<li><a href="https://www.php.net/">PHP</a> version <strong>7.2.24</strong> or greater.</li>
-	<li><a href="https://www.mysql.com/">MySQL</a> version <strong>5.5.5</strong> or greater.</li>
-</ul>
+---
 
-<h3>Recommendations</h3>
-<ul>
-	<li><a href="https://www.php.net/">PHP</a> version <strong>7.4</strong> or greater.</li>
-	<li><a href="https://www.mysql.com/">MySQL</a> version <strong>8.0</strong> or greater OR <a href="https://mariadb.org/">MariaDB</a> version <strong>10.5</strong> or greater.</li>
-	<li>The <a href="https://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">mod_rewrite</a> Apache module.</li>
-	<li><a href="https://wordpress.org/news/2016/12/moving-toward-ssl/">HTTPS</a> support.</li>
-	<li>A link to <a href="https://wordpress.org/">wordpress.org</a> on your site.</li>
-</ul>
+## 🎨 Sobre o Projeto
 
-<h2>Online Resources</h2>
-<p>If you have any questions that are not addressed in this document, please take advantage of WordPress&#8217; numerous online resources:</p>
-<dl>
-	<dt><a href="https://wordpress.org/documentation/">HelpHub</a></dt>
-		<dd>HelpHub is the encyclopedia of all things WordPress. It is the most comprehensive source of information for WordPress available.</dd>
-	<dt><a href="https://wordpress.org/news/">The WordPress Blog</a></dt>
-		<dd>This is where you&#8217;ll find the latest updates and news related to WordPress. Recent WordPress news appears in your administrative dashboard by default.</dd>
-	<dt><a href="https://planet.wordpress.org/">WordPress Planet</a></dt>
-		<dd>The WordPress Planet is a news aggregator that brings together posts from WordPress blogs around the web.</dd>
-	<dt><a href="https://wordpress.org/support/forums/">WordPress Support Forums</a></dt>
-		<dd>If you&#8217;ve looked everywhere and still cannot find an answer, the support forums are very active and have a large community ready to help. To help them help you be sure to use a descriptive thread title and describe your question in as much detail as possible.</dd>
-	<dt><a href="https://make.wordpress.org/support/handbook/appendix/other-support-locations/introduction-to-irc/">WordPress <abbr>IRC</abbr> (Internet Relay Chat) Channel</a></dt>
-		<dd>There is an online chat channel that is used for discussion among people who use WordPress and occasionally support topics. The above wiki page should point you in the right direction. (<a href="https://web.libera.chat/#wordpress">irc.libera.chat #wordpress</a>)</dd>
-</dl>
+O **Coopers Theme** é uma landing page moderna desenvolvida para apresentar os serviços da Coopers Digital de forma impactante e profissional. O projeto foi construído do zero utilizando as melhores práticas de desenvolvimento WordPress, com foco em:
 
-<h2>Final Notes</h2>
-<ul>
-	<li>If you have any suggestions, ideas, or comments, or if you (gasp!) found a bug, join us in the <a href="https://wordpress.org/support/forums/">Support Forums</a>.</li>
-	<li>WordPress has a robust plugin <abbr>API</abbr> (Application Programming Interface) that makes extending the code easy. If you are a developer interested in utilizing this, see the <a href="https://developer.wordpress.org/plugins/">Plugin Developer Handbook</a>. You shouldn&#8217;t modify any of the core code.</li>
-</ul>
+- ✅ **Design Responsivo** - Funciona perfeitamente em todos os dispositivos
+- ✅ **Performance Otimizada** - Carregamento rápido e eficiente
+- ✅ **SEO Friendly** - Estrutura semântica e otimizada para buscadores
+- ✅ **Acessibilidade** - Seguindo padrões WCAG
+- ✅ **Código Limpo** - Estrutura organizada e bem documentada
 
-<h2>Share the Love</h2>
-<p>WordPress has no multi-million dollar marketing campaign or celebrity sponsors, but we do have something even better&#8212;you. If you enjoy WordPress please consider telling a friend, setting it up for someone less knowledgeable than yourself, or writing the author of a media article that overlooks us.</p>
+---
 
-<p>WordPress is the official continuation of b2/caf&#233;log, which came from Michel V. The work has been continued by the <a href="https://wordpress.org/about/">WordPress developers</a>. If you would like to support WordPress, please consider <a href="https://wordpress.org/donate/">donating</a>.</p>
+## 🚀 Funcionalidades
 
-<h2>License</h2>
-<p>WordPress is free software, and is released under the terms of the <abbr>GPL</abbr> (GNU General Public License) version 2 or (at your option) any later version. See <a href="license.txt">license.txt</a>.</p>
+### 🎯 Seções Principais
+- **Hero Section** - Área de destaque com call-to-action
+- **To-do List** - Apresentação de funcionalidades
+- **Plans Section** - Planos e preços
+- **Carousel** - Showcase de projetos/serviços
+- **Contact Form** - Formulário de contato funcional
 
-</body>
-</html>
+### 💎 Features Avançadas
+- **Carousel Responsivo** - Sistema de páginas com navegação por dots
+- **Formulário Inteligente** - Validação em tempo real
+- **Animações Suaves** - Transições e efeitos CSS
+- **Mobile First** - Design otimizado para dispositivos móveis
+- **Touch Support** - Gestos de swipe no carousel
+- **Keyboard Navigation** - Navegação por teclado acessível
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+### Backend
+- **WordPress 6.x** - CMS base
+- **PHP 8.x** - Linguagem de programação
+- **Advanced Custom Fields** - Gerenciamento de conteúdo
+
+### Frontend
+- **HTML5** - Estrutura semântica
+- **CSS3** - Estilização moderna com Grid/Flexbox
+- **JavaScript ES6** - Interatividade e funcionalidades
+- **Google Fonts** - Tipografia (Montserrat)
+
+### Ferramentas & Metodologias
+- **Mobile First Design** - Desenvolvimento para mobile primeiro
+- **Progressive Enhancement** - Melhoria progressiva
+- **Semantic HTML** - HTML semântico
+- **CSS Grid & Flexbox** - Layouts modernos
+- **CSS Custom Properties** - Variáveis CSS
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+coopers-theme/
+├── 📁 assets/
+│   └── 📁 images/           # Imagens do tema
+│       ├── hero-bg.jpg
+│       ├── icon-mail.png
+│       └── todo-bg.png
+├── 📁 inc/                  # Includes do WordPress (opcional)
+├── 📁 js/                   # JavaScript
+│   └── main.js             # Funcionalidades principais
+├── 📁 template-parts/       # Componentes modulares
+│   ├── section-hero.php    # Seção hero
+│   ├── section-todolist.php # Seção to-do list
+│   ├── section-plans.php   # Seção de planos
+│   ├── section-carousel.php # Carousel de projetos
+│   └── section-contact.php # Formulário de contato
+├── 📄 style.css            # Estilos principais
+├── 📄 functions.php        # Funções do WordPress
+├── 📄 header.php           # Cabeçalho
+├── 📄 footer.php           # Rodapé
+├── 📄 front-page.php       # Página inicial
+└── 📄 index.php            # Template base
+```
+
+---
+
+## 💻 Instalação
+
+### Pré-requisitos
+- WordPress 5.0 ou superior
+- PHP 7.4 ou superior
+- Plugin Advanced Custom Fields (gratuito)
+
+### Passo a Passo
+
+1. **Clone/Download do tema**
+   ```bash
+   cd wp-content/themes/
+   git clone [repositório] coopers-theme
+   ```
+
+2. **Ativação no WordPress**
+   - Acesse: `Aparência > Temas`
+   - Ative o tema "Coopers Theme"
+
+3. **Instalação do ACF**
+   - Vá em `Plugins > Adicionar novo`
+   - Busque por "Advanced Custom Fields"
+   - Instale e ative a versão gratuita
+
+4. **Configuração inicial**
+   - Configure os campos ACF (veja seção [ACF](#-acf-advanced-custom-fields))
+   - Adicione as imagens necessárias
+   - Configure o formulário de contato
+
+---
+
+## ⚙️ Configuração
+
+### 1. Google Fonts
+O tema já inclui a fonte **Montserrat** automaticamente via `functions.php`:
+
+```php
+wp_enqueue_style(
+    'coopers-google-fonts',
+    'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'
+);
+```
+
+### 2. Enfileiramento de Scripts
+```php
+wp_enqueue_script(
+    'coopers-theme-main',
+    get_template_directory_uri() . '/js/main.js',
+    array(),
+    _S_VERSION,
+    true
+);
+```
+
+### 3. Suporte a Recursos
+```php
+add_theme_support('post-thumbnails');
+add_theme_support('title-tag');
+add_theme_support('automatic-feed-links');
+```
+
+---
+
+## 🧩 Componentes
+
+### 🦸 Hero Section
+**Arquivo:** `template-parts/section-hero.php`
+
+- Background dinâmico com overlay
+- Título e subtítulo editáveis via ACF
+- Call-to-action button responsivo
+- Imagem de destaque
+
+**Campos ACF:**
+- `hero_title` - Título principal
+- `hero_subtitle` - Subtítulo
+- `hero_description` - Descrição
+- `hero_button_text` - Texto do botão
+- `hero_button_url` - URL do botão
+
+### 📝 To-do List Section
+**Arquivo:** `template-parts/section-todolist.php`
+
+- Background diagonal estilizado
+- Conteúdo editável via ACF
+- Design moderno com linha decorativa
+
+### 💰 Plans Section
+**Arquivo:** `template-parts/section-plans.php`
+
+- Showcase de planos/serviços
+- Layout flexível e responsivo
+- Cards com hover effects
+
+### 🎠 Carousel Section
+**Arquivo:** `template-parts/section-carousel.php`
+
+- Sistema de páginas responsivo
+- Navegação por dots
+- Suporte a touch/swipe
+- 3 cards desktop, 2 cards tablet, 1 card mobile
+
+**JavaScript:** Controle automático de navegação
+
+### 📧 Contact Section
+**Arquivo:** `template-parts/section-contact.php`
+
+- Formulário funcional com validação
+- Design split-screen
+- Photo com efeito zoom
+- Feedback visual de envio
+
+---
+
+## 📱 Responsividade
+
+### Breakpoints Principais
+
+```css
+/* Mobile First */
+@media (max-width: 768px) { /* Mobile */ }
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */ }
+@media (min-width: 1025px) and (max-width: 1199px) { /* Desktop pequeno */ }
+@media (min-width: 1200px) { /* Desktop grande */ }
+```
+
+## 👨‍💻 Autor
+
+**Gastão Eduardo Santos Borges**
+- 💼 LinkedIn: [LinkedIn Profile](https://linkedin.com/in/gastaoesb2606)
+
+---
+
+<div align="center">
+
+**⭐ Se este projeto te ajudou, considere dar uma estrela!**
+
+**Desenvolvido com ❤️ para a Coopers Digital**
+
+</div>
